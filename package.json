@@ -1,0 +1,20 @@
+{
+  "name": "propellar-stumble",
+  "version": "0.1.0",
+  "description": "Propellar Stumble: a time-bending side-view shooter for phones (single-file HTML5 canvas).",
+  "scripts": {
+    "dev": "node build.mjs --serve",
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit -p .",
+    "test": "vitest run",
+    "e2e": "node tests/e2e/touch.mjs && node tests/e2e/playtest.mjs 150",
+    "check": "tsc --noEmit -p . && vitest run && node build.mjs && node tests/e2e/touch.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "private": true,
+  "type": "module"
+}
