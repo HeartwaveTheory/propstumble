@@ -1,0 +1,18 @@
+html, body { margin: 0; height: 100%; background: #1b1430; overflow: hidden; overscroll-behavior: none; touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+canvas { display: block; position: fixed; inset: 0; }
+#menu { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 16px; text-align: center; color: #f4ecff; font-family: system-ui, -apple-system, sans-serif; background: rgba(20, 14, 34, 0.72); }
+#menu.hidden { display: none; }
+#menu h1 { margin: 0; font-size: clamp(36px, 9vh, 72px); font-weight: 900; letter-spacing: 0.04em; line-height: 0.95; color: #ffcf5e; text-shadow: 0 4px 0 #b4472e; }
+#menu h1 span { color: #5ee0ff; text-shadow: 0 4px 0 #24608a; }
+#menu h2 { margin: 0; font-size: clamp(26px, 7vh, 44px); font-weight: 900; }
+#menu .sub { margin: 0; max-width: 520px; opacity: 0.85; }
+#menu .help { margin: 4px 0 0; font-size: 13px; max-width: 620px; opacity: 0.6; line-height: 1.5; }
+#menu button { font: 800 18px system-ui, sans-serif; padding: 12px 36px; border: 0; border-radius: 999px; background: #ffcf5e; color: #2a1630; cursor: pointer; }
+#menu button.ghost { background: transparent; color: #f4ecff; border: 2px solid rgba(244, 236, 255, 0.4); }
+#menu .stars { font-size: 34px; color: #ffcf5e; letter-spacing: 6px; }
+#menu table { border-collapse: collapse; min-width: 240px; }
+#menu td { padding: 2px 8px; text-align: left; }
+#menu td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+#menu tr.total td { border-top: 1px solid rgba(255, 255, 255, 0.3); font-weight: 800; padding-top: 6px; }
+#menu .rotate { display: none; color: #ff9e5e; font-weight: 700; }
+@media (orientation: portrait) and (pointer: coarse) { #menu .rotate { display: block; } }
